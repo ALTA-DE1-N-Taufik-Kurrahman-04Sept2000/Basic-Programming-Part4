@@ -1,6 +1,20 @@
 def mean_median(array_input):
-    mean = 1.0
-    median = 1
+    if len(array_input) == 0:
+        return None
+
+    # Hitung mean
+    mean = sum(array_input) / len(array_input)
+
+    # Hitung median
+    if len(array_input) % 2 == 0:
+        # Jika jumlah elemen genap, median adalah rata-rata dari dua nilai tengah
+        middle1 = array_input[len(array_input) // 2 - 1]
+        middle2 = array_input[len(array_input) // 2]
+        median = (middle1 + middle2) / 2
+    else:
+        # Jika jumlah elemen ganjil, median adalah nilai tengah
+        median = array_input[len(array_input) // 2]
+
     return (mean, median)
 
 if __name__ == '__main__':

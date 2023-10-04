@@ -1,9 +1,14 @@
-def cetak_table_perkalian(number):
-    pattern = ""
-    return pattern
+def cetak_table_perkalian(n):
+    table = ""
+    for i in range(1, n + 1):
+        row = [str(i * j) for j in range(1, n + 1)]
+        row_str = " " + " ".join(row)
+        table += row_str + "\n"
+
+    return table
 
 if __name__ == '__main__':
-    cetak_table_perkalian(9)
+    print(cetak_table_perkalian(9))
     """
      1 2 3 4 5 6 7 8 9
      2 4 6 8 10 12 14 16 18
